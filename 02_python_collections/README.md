@@ -21,6 +21,7 @@ lst.insert(index, element)  # Insert at index
 lst[index]              # Access element
 lst.pop(index)          # Remove by index
 lst.remove(element)     # Remove by value
+lst.index(val, optional_start_search_from_index, optional_end_search_till_index)
 
 # Utility Operations
 lst.extend(iterable)    # Bulk add
