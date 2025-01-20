@@ -27,7 +27,6 @@ class Solution:
                 result_arr.append(arr2[index2])
                 index2 += 1
                 
-       
         result_arr.extend(arr1[index1:])
         result_arr.extend(arr2[index2:])
         
