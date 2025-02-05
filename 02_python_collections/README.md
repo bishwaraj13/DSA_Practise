@@ -146,3 +146,40 @@ sum(collection)       # Sum numbers
 any(collection)       # True if any true
 all(collection)       # True if all true
 ```
+
+#### 10. Heap Operations using heapq
+
+```python
+import heapq
+
+# Creating a heap
+heap = []
+heapq.heapify(heap)    # Convert list to heap in-place O(n)
+
+# Core Operations
+heapq.heappush(heap, item)    # Add element - O(log n)
+heapq.heappop(heap)           # Remove & return smallest - O(log n)
+
+# Max Heap Simulation (multiply by -1)
+max_heap = []
+heapq.heappush(max_heap, -item)  # For max heap
+largest = -heapq.heappop(max_heap)
+```
+
+#### 11. Frequency counting using Counter
+
+```python
+from collections import Counter
+
+# Creating a Counter
+counter = Counter()           # Empty counter
+counter = Counter(['a', 'b', 'a'])  # From iterable
+counter = Counter('hello')    # From string
+
+# usage
+char_count = Counter('hello')
+
+for ch, freq in char_count.items():
+  ...
+
+```
