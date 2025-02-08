@@ -7,21 +7,21 @@ class Solution:
         curr_subset = []
 
         def dfs(index, curr_sum):
-            if curr_sum == target:
-                result.append(curr_subset.copy())
+            if index >= len(candidates):
+                if curr_sum == target:
+                    result.append(curr_subset.copy())
                 return
 
-            if index >= len(candidates) or curr_sum > target:
-                return
+            if curr_sum <= target:
+                # include current element
+                curr_subset.append(candidates[index])
+                dfs(index, curr_sum + candidates[index])
 
-            # include current element
-            curr_subset.append(candidates[index])
-            dfs(index, curr_sum + candidates[index])
-
-            # dont include current element
-            curr_subset.pop()
-            dfs(index+1, curr_sum)
+                # dont include current element
+                curr_subset.pop()
+                dfs(index+1, curr_sum)
 
         dfs(0, 0)
 
         return result
+        
