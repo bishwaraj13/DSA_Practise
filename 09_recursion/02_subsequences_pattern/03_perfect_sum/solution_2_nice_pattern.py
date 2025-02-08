@@ -1,12 +1,12 @@
-# the test did not pass, but this is how we should generally do.. using left + right
+# https://www.geeksforgeeks.org/problems/perfect-sum-problem5633/1
 class Solution:
     def perfectSum(self, arr, target):
         def dfs(index, curr_sum):
-            if curr_sum == target:
-                return 1
-            
-            if index >= len(arr) or curr_sum > target:
-                return 0
+            if index == len(arr):
+                if curr_sum == target:
+                    return 1
+                else:
+                    return 0
             
             # include current element
             left = dfs(index+1, curr_sum + arr[index])
@@ -17,3 +17,5 @@ class Solution:
             return left + right
         
         return dfs(0, 0)
+    
+print(Solution().perfectSum([0, 10, 0], 0))

@@ -6,11 +6,10 @@ class Solution:
         
         def dfs(index, curr_sum):
             nonlocal result
-            if curr_sum == target:
-                result += 1
-                return
-            
-            if index >= len(arr) or curr_sum > target:
+
+            if index == len(arr):
+                if curr_sum == target:
+                    result += 1
                 return
             
             # include current element
@@ -23,3 +22,5 @@ class Solution:
         
         dfs(0, 0)
         return result
+    
+print(Solution().perfectSum([0, 10, 0], 0))
