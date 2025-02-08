@@ -12,6 +12,8 @@ class Solution:
                     result.append(curr_subset.copy())
                 return
 
+            # this check has only been put to avoid infinite loop
+            # I think for -ve numbers, this condition does not make sense
             if curr_sum <= target:
                 # include current element
                 curr_subset.append(candidates[index])
