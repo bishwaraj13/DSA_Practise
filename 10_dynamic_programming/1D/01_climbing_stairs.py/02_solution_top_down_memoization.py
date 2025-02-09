@@ -8,6 +8,10 @@ class Solution:
             # index 1 is step 2, index 0 is step 1
             if index <= 1:
                 return index+1
+            
+            # Issue here:
+            # we should check value at dp_cache[index] first and
+            # return the result if exists
 
             left = 0
             if index-1 >=0 and dp_cache[index-1] != -1:
@@ -23,6 +27,8 @@ class Solution:
                 right = dfs(index-2)
                 dp_cache[index-2] = right
 
+            # Issue here:
+            # Should use dp_cache to cache the result for dp_cache[index]
             return left+right
 
         return dfs(n-1)
