@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/same-tree/
 # Do preorder traversal of both nodes together and compare
-from typing import List
+from typing import *
 
 # Definition for a binary tree node.
 class TreeNode:
