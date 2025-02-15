@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/insert-interval/description/
+# Better solution is to use Binary Search
 from typing import *
 
 class Solution:
