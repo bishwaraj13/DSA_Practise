@@ -1,4 +1,6 @@
 # https://leetcode.com/problems/binary-search-tree-iterator/description/
+# If in following code, you create pushAllRight, and create before function instead of next, etc..
+# you get reversed inorder traversal
 from typing import *
 
 # Definition for a binary tree node.
