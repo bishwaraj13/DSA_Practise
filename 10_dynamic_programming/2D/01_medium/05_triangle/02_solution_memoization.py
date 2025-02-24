@@ -1,4 +1,4 @@
-# # https://leetcode.com/problems/triangle/
+# https://leetcode.com/problems/triangle/
 from typing import *
 
 class Solution:
