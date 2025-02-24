@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/unique-paths/description/
+# note: tabulation can be done in very similar way like unique-paths-i
 from typing import *
 
 class Solution:
