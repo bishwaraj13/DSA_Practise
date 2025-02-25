@@ -9,10 +9,8 @@ If you choose to rest on day i, you don't travel any distance but your energy (K
 You cannot travel if your energy (K) is 0
 Maximum value of K cannot exceed the initial given value
 Return the maximum total distance you can travel over the n days.
+
 Example 1:
-javascript
-
-
 Input: 
 distances = [20, 10, 2, 5, 50, 15, 13]
 n = 7
