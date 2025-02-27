@@ -24,3 +24,5 @@ class Solution:
                 high = mid - 1
                 
         return ans
+    
+print(Solution().findFloor([5, 7, 7, 8, 8, 10], 8))
