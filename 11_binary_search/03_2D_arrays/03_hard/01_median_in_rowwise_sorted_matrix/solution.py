@@ -27,6 +27,11 @@ class Solution:
             if countSmallerOrEqualElements <= median_position:
                 low = mid + 1
             else:
+                # Ques: what is the guarantee that mid is part of array?
+                # mid may not be part of matrix, but on further binary search iteration,
+                # the final result will be something that's in the matrix,
+                # because its the smallest element that suffices the condition of 
+                # having smaller or equal elements > median_position
                 result = mid
                 high = mid - 1
         
@@ -40,7 +45,7 @@ class Solution:
             
         return count
     
-    def upperBound(self, arr, x: int, n: int) -> int:
+    def upperBound(self, arr, x: int, n:  int) -> int:
         low = 0
         high = n - 1
         ans = n
@@ -57,4 +62,3 @@ class Solution:
                 low = mid + 1
         
         return ans
-    
