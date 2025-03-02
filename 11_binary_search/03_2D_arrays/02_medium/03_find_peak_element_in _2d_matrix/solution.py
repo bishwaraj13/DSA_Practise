@@ -1,4 +1,7 @@
 # https://leetcode.com/problems/find-a-peak-element-ii/
+# Here binary search is ONLY used to cut half the search space.
+# And finding max in a column is the best way to get best shot at peak, 
+# because up and down comparison is fixed for you that way.
 from typing import *
 
 class Solution:
