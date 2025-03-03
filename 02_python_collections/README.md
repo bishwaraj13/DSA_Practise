@@ -1,3 +1,12 @@
+#### 0. Miscellaneous
+
+```python
+# To iterate over char 'a' to 'z' in python
+for i in range(ord('a'), ord('z') + 1):
+    letter = chr(i)
+    print(letter)
+```
+
 #### 1. Overview of Python Collections
 
 - **Built-in Collection Types**
