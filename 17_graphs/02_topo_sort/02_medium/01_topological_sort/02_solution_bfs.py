@@ -1,4 +1,5 @@
 # # https://www.geeksforgeeks.org/problems/topological-sort/1
+# This algorithm is called Kahn's Algorithm
 from collections import deque
 
 class Solution:
