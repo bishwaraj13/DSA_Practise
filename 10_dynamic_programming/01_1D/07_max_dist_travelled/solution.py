@@ -28,7 +28,7 @@ Day 6: Travel 15 units (K: 2 → 1)
 Day 7: Travel 13 units (K: 1 → 0)
 Total distance = 20 + 10 + 50 + 15 + 13 = 108
 '''
-from typing import list
+from typing import List
 
 class Solution:
     def maximumTotalDistance(self, distances: List[int], k: int):
