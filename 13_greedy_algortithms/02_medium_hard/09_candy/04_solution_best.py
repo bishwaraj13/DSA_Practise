@@ -2,7 +2,7 @@
 # Hard to come up with this
 # But its easy when you draw and understand..
 # in terms of increasing ratings, decreasing ratings and flat ratings
-# solution explanation: https://www.youtube.com/watch?v=IIqVFvKE6RY
+# solution explanation: https://www.youtube.com/watch?v=IIqVFvKE6RY&t=923s
 from typing import *
 
 class Solution:
