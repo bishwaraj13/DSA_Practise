@@ -1,5 +1,6 @@
 # https://www.naukri.com/code360/problems/partition-a-set-into-two-subsets-such-that-the-difference-of-subset-sums-is-minimum_842494
-# this problem uses tabulation concept from subset sum problem
+# this problem uses ditto tabulation solution from subset sum problem
+# Only at last we have one extra loop
 from typing import List
 
 def minSubsetSumDifference(arr: List[int], n: int) -> int:
