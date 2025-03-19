@@ -12,12 +12,16 @@ class Solution:
         dist_arr[src] = 0
         heapq.heappush(heap, (0, src)) # O(log n)
         
-        while heap:
-            distance, node = heapq.heappop(heap) # O(log n)
+        while heap: # V times
+            distance, node = heapq.heappop(heap) # O(log V)
             
-            for adj_node, edge_wt in adj[node]:
+            for adj_node, edge_wt in adj[node]: # for (V-1) times
                 if distance + edge_wt < dist_arr[adj_node]:
                     dist_arr[adj_node] = distance + edge_wt
-                    heapq.heappush(heap, (dist_arr[adj_node], adj_node))
+                    heapq.heappush(heap, (dist_arr[adj_node], adj_node)) # O (log V)
                     
-        return dist_arr # Total TC: E log V
+        return dist_arr
+    # Total TC: V * (log V + (V-1) * log V)
+    # ~ V^2 log V
+    # ~ E log V
+    # So, total TC =  E log V
