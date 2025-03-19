@@ -20,4 +20,4 @@ class Solution:
                     dist_arr[adj_node] = distance + edge_wt
                     heapq.heappush(heap, (dist_arr[adj_node], adj_node))
                     
-        return dist_arr
+        return dist_arr # Total TC: E log V
