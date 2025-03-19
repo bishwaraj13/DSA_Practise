@@ -33,7 +33,7 @@ class Solution:
                  
             stack.append(node)
             
-        # step1: do topological sort using dfs
+        # step1: do topological sort using dfs - O(V + E)
         for node in range(V):
             if not visited[node]:
                 dfs(node)
@@ -41,7 +41,7 @@ class Solution:
         # dist from source to source is 0     
         dist_arr[0] = 0
         
-        # step2: pop elements from stack and update dist array
+        # step2: pop elements from stack and update dist array - O(vertex + edges)
         while stack:
             node = stack.pop()
             
