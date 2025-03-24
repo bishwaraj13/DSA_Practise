@@ -6,6 +6,7 @@ class Solution:
         base = 29
         last_index = 0
         mod = 10**9 + 7
+        power = 1
 
         # The intution can be better understood in form of numbers
         # Say we have string s = "12145". The number has palindrome prefix: "121".
@@ -31,7 +32,9 @@ class Solution:
             # i=0, ch=1, reversed_prefix = (ch*10^i)+reversed_prefix = (1*10^0)+0 = 1
             # i=1, ch=2, reversed_prefix = (ch*10^i)+reversed_prefix = (2*10^1)+1 = 21
             # i=2, ch=3, reversed_prefix = (ch*10^i)+reversed_prefix = (3*10^2)+21 = 321
-            reversed_prefix = (ch_int * (base**i) + reversed_prefix) % mod
+            # reversed_prefix = (ch_int * (base**i) + reversed_prefix) % mod
+            reversed_prefix = (ch_int * power + reversed_prefix) % mod
+            power = (power * base) % mod
 
             if prefix == reversed_prefix:
                 last_index = i
