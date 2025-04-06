@@ -1,10 +1,12 @@
 # https://leetcode.com/problems/buildings-with-an-ocean-view/
+# Easier solution to do this is to find next-greater elements.. 
+# and then return indexes where we could not find next greater element
 from typing import *
 
 class Solution:
     def findBuildings(self, heights: List[int]) -> List[int]:
         # in other words, we want to find which of the buildings
-        # have a next greater element
+        # dont have a next greater element
         # at the end, the elements left in the stack will be the ones
         # which wouldn't have any greater elements after them
         stack = []
